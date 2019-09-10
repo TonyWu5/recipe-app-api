@@ -1,0 +1,15 @@
+version: "3"
+# version of docker compose
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+      #8000 on host, 8000 on image
+    volumes:
+      - ./app:/app
+      # maps app directory in project to app directory in image
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
+      # run command using shell
