@@ -1,4 +1,6 @@
 FROM python:3.7-alpine
+# docker image base
+
 MAINTAINER TONY WU
 
 ENV PYTHONUNBUFFERED 1
